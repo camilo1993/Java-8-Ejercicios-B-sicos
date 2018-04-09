@@ -1,99 +1,58 @@
-
-
 package calc_i;
 
+import java.util.*;
 
 public class Calc_I {
 
-
     public static void main(String[] args) {
 
-    char x;
-    
-    x='c';
-    
-    
-    switch (x)
-    {
-        case 'a':  
-    {
-        
-       System.out.println("Suma");
-        
-       double a=3;
-       
-       double b=4;
-       
-       double c=a+b;
-       
-     
-       System.out.println("El resultado es " + (c));
-       break;
-       
-    }        
-    case 'b':
-    {
-     
-    System.out.println("Resta");
-        
-       double a=65;
-       
-       double b=4;
-       
-       double c=a-b;
-       
-     
-       System.out.println("El resultado es " + (c));    
-       break;
-        
-        
-        
-    }
-    case 'c':
-    {
-        System.out.println("Multiplicación");
-        
-       double a=65;
-       
-       double b=4;
-       
-       double c=a*b;
-       
-     
-       System.out.println("El resultado es " + (c));  
-       break;
-        
-    }    
-    case 'd':
-    {
-        System.out.println("división");
-        
-       double a=65;
-       
-       double b=4;
-       
-       double c=a/b;
-       
-     
-       System.out.println("El resultado es " + (c)); 
-       break;
-        
-    }    
-        
-    }   
-    
-    
-        
-   
-        
-        
+        float num1;
+        float num2;
+        float resultado;
+        char operacion;
 
-    
-    
+        Scanner reader = new Scanner(System.in);
 
-        
- 
+        System.out.println("Digite Primer Número");
+        num1 = reader.nextFloat();
+
+        System.out.println("Digite Segundo Número");
+        num2 = reader.nextFloat();
+
+        System.out.println("Digite Operación");
+        operacion = reader.next().charAt(0);
+
+        switch (operacion) {
+
+            case '+':
+
+                resultado = num1 + num2;
+                System.out.println("El resultado es = " + resultado);
+                break;
+
+            case '-':
+
+                resultado = num1 - num2;
+                System.out.println("El resultado es = " + resultado);
+                break;
+
+            case '*':
+
+                resultado = num1 * num2;
+                System.out.println("El resultado es = " + resultado);
+                break;
+
+            case '/':
+
+                resultado = num1 / num2;
+                System.out.println("El resultado es = " + resultado);
+                break;
+                
+            default:
+                System.out.println("Operación Invalida");
+                break;        
+        }
 
     }
-    
+
 }
