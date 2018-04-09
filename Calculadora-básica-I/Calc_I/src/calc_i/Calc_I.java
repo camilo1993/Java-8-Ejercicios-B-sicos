@@ -47,10 +47,10 @@ public class Calc_I {
                 resultado = num1 / num2;
                 System.out.println("El resultado es = " + resultado);
                 break;
-                
+
             default:
                 System.out.println("Operación Invalida");
-                break;        
+                break;
         }
 
     }
