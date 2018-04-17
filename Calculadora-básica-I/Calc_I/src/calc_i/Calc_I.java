@@ -19,7 +19,7 @@ public class Calc_I {
         System.out.println("Digite Segundo Número");
         num2 = reader.nextFloat();
 
-        System.out.println("Digite Operación");
+        System.out.println("Digite Operación (+-/*) ");
         operacion = reader.next().charAt(0);
 
         switch (operacion) {
