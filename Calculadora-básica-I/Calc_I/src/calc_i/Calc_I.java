@@ -1,5 +1,7 @@
 package calc_i;
 
+import java.text.DecimalFormat;
+
 import java.util.*;
 
 public class Calc_I {
@@ -14,10 +16,14 @@ public class Calc_I {
         Scanner reader = new Scanner(System.in);
 
         System.out.println("Digite Primer Número");
-        num1 = reader.nextFloat();
+        do {
+            num1 = reader.nextFloat();
+        } while (num1 > 100 || num1 < 0);
 
         System.out.println("Digite Segundo Número");
-        num2 = reader.nextFloat();
+        do {
+            num2 = reader.nextFloat();
+        } while (num2 > 100 || num2 < 0);
 
         System.out.println("Digite Operación (+-/*) ");
         operacion = reader.next().charAt(0);
@@ -25,27 +31,33 @@ public class Calc_I {
         switch (operacion) {
 
             case '+':
-
+                DecimalFormat formateador1 = new DecimalFormat("##.##");
                 resultado = num1 + num2;
-                System.out.println("El resultado es = " + resultado);
+                System.out.println("El resultado es = " + formateador1.format(resultado));
+
+                // System.out.println("El resultado es = %.2f " + resultado ); 
+                // otra forma de limitar decimales
                 break;
 
             case '-':
-
+                DecimalFormat formateador2 = new DecimalFormat("##.##");
                 resultado = num1 - num2;
-                System.out.println("El resultado es = " + resultado);
+                System.out.println("El resultado es = " + formateador2.format(resultado));
                 break;
 
             case '*':
 
+                DecimalFormat formateador3 = new DecimalFormat("##.##");
                 resultado = num1 * num2;
-                System.out.println("El resultado es = " + resultado);
+                System.out.println("El resultado es = " + formateador3.format(resultado));
+
                 break;
 
             case '/':
-
+                DecimalFormat formateador4 = new DecimalFormat("##.##");
                 resultado = num1 / num2;
-                System.out.println("El resultado es = " + resultado);
+                System.out.println("El resultado es = " + formateador4.format(resultado));
+
                 break;
 
             default:
