@@ -5,6 +5,8 @@
  */
 package calcii;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author kamilo
@@ -15,7 +17,25 @@ public class CalcII {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+                String [] arc=new String[5];
+        
+        for(int i=0;i<5;i++){
+            
+            arc[i]=JOptionPane.showInputDialog("Introducir Números " + (i+1));
+        }
+        
+
+        
+        for(String elemento: arc){
+    
+            System.out.println("Número:" + elemento);
+        }
     }
     
 }
+        
+        
+        
+        
+    
