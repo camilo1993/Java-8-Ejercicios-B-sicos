@@ -42,11 +42,16 @@ public class CalcII {
         switch (operacion) {
 
             case '+':
+               
 
-                resultado = matriz[0] + num2;
-                System.out.println("El resultado es = " + resultado);
+                
+
+                     for (int i = 0; i < matriz.length; i++) 
+                    
+                    System.out.println("El resultado es = " + matriz[i] + num2);
+                }
 
         }
 
     }
-}
+
