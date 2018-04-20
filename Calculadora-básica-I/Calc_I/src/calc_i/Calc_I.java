@@ -15,13 +15,13 @@ public class Calc_I {
 
         Scanner reader = new Scanner(System.in);
 
-        System.out.println("Digite Primer Número");
-        do {
+        do {System.out.println("Digite Primer Número");
+        
             num1 = reader.nextFloat();
         } while (num1 > 100 || num1 < 0);
 
-        System.out.println("Digite Segundo Número");
-        do {
+        do {System.out.println("Digite Segundo Número");
+        
             num2 = reader.nextFloat();
         } while (num2 > 100 || num2 < 0);
 
