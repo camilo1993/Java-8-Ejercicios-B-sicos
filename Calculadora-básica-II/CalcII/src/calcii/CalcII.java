@@ -19,22 +19,25 @@ public class CalcII {
     public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);
-        float matriz[] = new float[5];
-        float num2;
+        float arreglo1[] = new float[5];
+        float arreglo2[] = new float[5];
         char operacion;
-        float resultado;
+        float resultado[] = new float[5];;
 
-        do {
-            for (int i = 0; i < matriz.length; i++) {
-                System.out.println("Ingresar Numeros");
-                matriz[i] = reader.nextInt();
-            }
-        } while (matriz[0] > 100 || matriz[0] < 0);
+        for (int i = 0; i < 5; i++) {
+            do {
+                System.out.println("Ingrese Numeros arreglo 1: " + i);
+                arreglo1[i] = reader.nextInt();
+            } while (arreglo1[i] > 100 || arreglo1[i] < 0);
 
-        do {
-            System.out.println("Digite Segundo Número");
-            num2 = reader.nextFloat();
-        } while (num2 > 100 || num2 < 0);
+        }
+
+        for (int i = 0; i < 5; i++) {
+            do {
+                System.out.println("Ingrese Numeros arreglo 2: " + i);
+                arreglo2[i] = reader.nextInt();
+            } while (arreglo2[i] > 100 || arreglo2[i] < 0);
+        }
 
         System.out.println("Digite Operación (+-/*) ");
         operacion = reader.next().charAt(0);
@@ -42,10 +45,37 @@ public class CalcII {
         switch (operacion) {
 
             case '+':
-                resultado = matriz[0] + num2;
-                for (int i = 0; i < matriz.length; i++) {
-                    System.out.println(resultado);
+                for (int i = 0; i < 5; i++) {
+                    resultado[i] = arreglo1[i] + arreglo2[i];
+                    System.out.println("Resultado : %.2f" + resultado[i]);
                 }
+                break;
+            case '-':
+
+                for (int i = 0; i < 5; i++) {
+                    resultado[i] = arreglo1[i] - arreglo2[i];
+                    System.out.println("Resultado : %.2f" + resultado[i]);
+                }
+                break;
+
+            case '*':
+
+                for (int i = 0; i < 5; i++) {
+                    resultado[i] = arreglo1[i] * arreglo2[i];
+                    System.out.println("Resultado : %.2f" + resultado[i]);
+                }
+                break;
+
+            case '/':
+                for (int i = 0; i < 5; i++) {
+                    resultado[i] = arreglo1[i] / arreglo2[i];
+                    System.out.println("Resultado : %.2f" + resultado[i]);
+                }
+                break;
+
+            default:
+                System.out.println("Operación Invalida");
+                break;
         }
 
     }
